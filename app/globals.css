@@ -1,0 +1,338 @@
+@import "tailwindcss";
+
+:root {
+  --page: #f5f0e6;
+  --page-deep: #ece5d7;
+  --paper: rgba(255, 255, 255, 0.76);
+  --paper-strong: rgba(255, 255, 255, 0.9);
+  --ink: #122033;
+  --soft: #45556d;
+  --muted: #7e5f2d;
+  --line: rgba(18, 32, 51, 0.1);
+  --accent: #31b598;
+  --accent-deep: #107465;
+  --sun: #f2a94a;
+  --chip: rgba(49, 181, 152, 0.12);
+}
+
+@theme inline {
+  --color-background: var(--page);
+  --color-foreground: var(--ink);
+  --font-sans: var(--font-sora);
+  --font-serif: var(--font-cormorant);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(242, 169, 74, 0.22), transparent 22rem),
+    radial-gradient(circle at right 15%, rgba(49, 181, 152, 0.16), transparent 20rem),
+    linear-gradient(180deg, var(--page) 0%, var(--page-deep) 100%);
+  color: var(--ink);
+  font-family: var(--font-sora), sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(49, 181, 152, 0.22);
+}
+
+.ambient {
+  pointer-events: none;
+  position: fixed;
+  z-index: 0;
+  width: 28rem;
+  height: 28rem;
+  border-radius: 999px;
+  filter: blur(70px);
+  opacity: 0.6;
+}
+
+.ambient-left {
+  top: -8rem;
+  left: -10rem;
+  background: rgba(242, 169, 74, 0.3);
+}
+
+.ambient-right {
+  right: -8rem;
+  top: 12rem;
+  background: rgba(49, 181, 152, 0.22);
+}
+
+.surface-card {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--paper-strong), var(--paper));
+  box-shadow: 0 28px 60px rgba(18, 32, 51, 0.08);
+}
+
+.section-shell {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 2rem;
+}
+
+.section-intro {
+  max-width: 48rem;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.section-title {
+  margin-top: 0.8rem;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+  color: var(--ink);
+}
+
+.section-copy {
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--soft);
+}
+
+.hero-board {
+  position: relative;
+  z-index: 1;
+}
+
+.metric-card {
+  border: 1px solid var(--line);
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.82);
+  padding: 1.1rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55);
+}
+
+.feature-card {
+  min-height: 16rem;
+  border-radius: 1.8rem;
+  border: 1px solid var(--line);
+  padding: 1.6rem;
+  box-shadow: 0 22px 45px rgba(18, 32, 51, 0.06);
+}
+
+.feature-amber {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 247, 233, 0.95));
+}
+
+.feature-teal {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(236, 252, 248, 0.95));
+}
+
+.feature-slate {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(241, 245, 250, 0.96));
+}
+
+.feature-index {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: rgba(18, 32, 51, 0.06);
+  padding: 0.45rem 0.8rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.feature-title,
+.workflow-title {
+  margin-top: 1.1rem;
+  font-size: 1.7rem;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.feature-copy,
+.workflow-copy {
+  margin-top: 0.95rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--soft);
+}
+
+.workflow-shell {
+  border-radius: 2rem;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(18, 32, 51, 0.95), rgba(16, 41, 70, 0.94));
+  padding: 2rem;
+  box-shadow: 0 28px 60px rgba(18, 32, 51, 0.15);
+}
+
+.workflow-shell .section-title,
+.workflow-shell .section-copy,
+.workflow-shell .section-eyebrow,
+.workflow-title,
+.workflow-copy {
+  color: white;
+}
+
+.workflow-shell .section-eyebrow {
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.workflow-card {
+  border-radius: 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 1.6rem;
+  backdrop-filter: blur(8px);
+}
+
+.workflow-step {
+  font-family: var(--font-cormorant), serif;
+  font-size: 3rem;
+  line-height: 0.9;
+  color: rgba(255, 255, 255, 0.34);
+}
+
+.doc-card {
+  display: flex;
+  min-height: 16rem;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border-radius: 1.85rem;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(248, 247, 242, 0.9));
+  padding: 1.6rem;
+  box-shadow: 0 22px 50px rgba(18, 32, 51, 0.07);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.doc-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(16, 116, 101, 0.28);
+  box-shadow: 0 32px 70px rgba(18, 32, 51, 0.1);
+}
+
+.doc-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.doc-arrow::after {
+  content: "↗";
+}
+
+.cta-button,
+.ghost-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.95rem 1.45rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition:
+    transform 160ms ease,
+    background-color 160ms ease,
+    color 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.cta-button:hover,
+.ghost-button:hover {
+  transform: translateY(-2px);
+}
+
+.cta-button {
+  background: linear-gradient(135deg, var(--accent) 0%, #1e8f7f 100%);
+  color: white;
+  box-shadow: 0 20px 40px rgba(49, 181, 152, 0.24);
+}
+
+.cta-button-light {
+  background: white;
+  color: var(--ink);
+  box-shadow: none;
+}
+
+.ghost-button {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--ink);
+}
+
+.ghost-button-dark {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.cta-shell {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 2.2rem;
+  background:
+    radial-gradient(circle at top right, rgba(242, 169, 74, 0.18), transparent 20rem),
+    linear-gradient(135deg, #0e2238 0%, #15395d 100%);
+  padding: 2.2rem;
+  box-shadow: 0 30px 70px rgba(18, 32, 51, 0.18);
+}
+
+@media (max-width: 1024px) {
+  .ambient {
+    width: 22rem;
+    height: 22rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-copy {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .cta-shell,
+  .workflow-shell {
+    padding: 1.4rem;
+  }
+}
