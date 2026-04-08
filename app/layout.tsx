@@ -15,13 +15,13 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://pymeclaweb.vercel.app"),
-  title: "Pymeclaw | Local AI assistant for small Spanish businesses",
+  title: "Pymeclaw | Asistente local para autónomos y pequeñas oficinas",
   description:
-    "Product website for Pymeclaw, a local AI office assistant for small Spanish businesses running on Mac.",
+    "Web de producto de Pymeclaw, un asistente local para autónomos y pequeñas oficinas que trabajan en Mac.",
   openGraph: {
     title: "Pymeclaw",
     description:
-      "Local AI office assistant for small Spanish businesses. Runs on your Mac with no cloud and no monthly fee.",
+      "Asistente local para presupuestos, facturas, citas y seguimiento diario. Funciona en tu Mac, sin nube y sin cuota mensual.",
     images: ["/pymeclaw-logo.jpeg"],
   },
   icons: {
@@ -36,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${sora.variable} ${cormorant.variable} bg-[var(--page)]`}
     >
       <body>{children}</body>

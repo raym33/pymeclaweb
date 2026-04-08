@@ -1,6 +1,6 @@
 # Pymeclaweb
 
-Marketing website for **Pymeclaw**, built with Next.js and prepared for deployment on Vercel.
+Web de producto de **Pymeclaw**, construida con Next.js y preparada para desplegar en Vercel.
 
 ## Stack
 
@@ -8,29 +8,29 @@ Marketing website for **Pymeclaw**, built with Next.js and prepared for deployme
 - React 19
 - Tailwind CSS 4
 
-## Local development
+## Desarrollo local
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Abre [http://localhost:3000](http://localhost:3000).
 
-## Production checks
+## Verificaciones
 
 ```bash
 npm run lint
 npm run build
 ```
 
-## Deploy to Vercel
+## Despliegue en Vercel
 
-This project is ready to be imported directly into Vercel from:
+Este proyecto está listo para importarse directamente en Vercel desde:
 
 - [raym33/pymeclaweb](https://github.com/raym33/pymeclaweb)
 
-## Related links
+## Enlaces
 
-- Product docs: [raym33/pymeclaw](https://github.com/raym33/pymeclaw)
-- Contact: [learntouseai@gmail.com](mailto:learntouseai@gmail.com)
+- Documentación del producto: [raym33/pymeclaw](https://github.com/raym33/pymeclaw)
+- Contacto: [pymeclaw@gmail.com](mailto:pymeclaw@gmail.com)

@@ -1,128 +1,156 @@
 import Image from "next/image";
 
 const docsBase = "https://github.com/raym33/pymeclaw/blob/main";
+const contactMail = "pymeclaw@gmail.com";
 
 const trustSignals = [
-  "Runs on your own Mac",
-  "No cloud dependency",
-  "No monthly API fee",
-  "Built for small Spanish businesses",
+  "Se queda en tu Mac",
+  "Sin nube obligatoria",
+  "Sin cuota mensual de API",
+  "Pensado para autónomos y pequeñas oficinas",
 ];
 
 const features = [
   {
-    title: "Invoices and quotes without context switching",
+    title: "Presupuestos y facturas sin cambiar de contexto",
     copy:
-      "Turn plain-language requests into ready-to-send business documents without bouncing between Word, Excel, and WhatsApp.",
+      "Le dices lo que has hecho y Pymeclaw te ayuda a dejar listo el documento sin ir saltando entre Word, Excel, correo y WhatsApp.",
     tone: "amber",
   },
   {
-    title: "Appointments and reminders",
+    title: "Citas y recordatorios con menos caos",
     copy:
-      "Keep daily schedules moving with appointment tracking, reminder flows, and less last-minute admin.",
+      "La agenda diaria, los recordatorios y las tareas de seguimiento dejan de depender de la memoria o de mensajes sueltos.",
     tone: "teal",
   },
   {
-    title: "Customer memory that stays local",
+    title: "Historial de clientes que no se pierde",
     copy:
-      "Track customer history, follow-up tasks, and routine requests on the same Mac where the business already works.",
+      "Mantiene el contexto del negocio en la misma máquina donde trabajas: clientes, notas, trabajos y próximos pasos.",
     tone: "slate",
   },
   {
-    title: "Payment follow-up with less friction",
+    title: "Cobros pendientes más visibles",
     copy:
-      "See what is still unpaid and keep collections moving without writing the same reminder messages again and again.",
+      "Te ayuda a ver qué sigue pendiente y a mover el seguimiento sin tener que redactar cada mensaje desde cero.",
     tone: "amber",
   },
   {
-    title: "A calmer front desk",
+    title: "Rutina diaria más limpia",
     copy:
-      "Daily office routines, summary views, and reminders are easier to run when the assistant is built around the business day.",
+      "Resume lo importante del día, ordena tareas repetitivas y reduce el desgaste mental de la parte administrativa.",
     tone: "teal",
   },
   {
-    title: "Private by default",
+    title: "Privacidad y control",
     copy:
-      "Pymeclaw is positioned for businesses that want control, local execution, and fewer external services touching daily operations.",
+      "Pymeclaw está planteado para negocios que quieren una herramienta local, más control y menos dependencia de servicios externos.",
     tone: "slate",
   },
 ];
 
 const sectors = [
   {
-    name: "Trades and repair work",
+    name: "Oficios y servicios técnicos",
     copy:
-      "Plumbers, electricians, maintenance and reform work that need fast quoting, invoicing, and payment chasing.",
+      "Fontaneros, electricistas, mantenimiento, reformas y profesionales que viven entre avisos, presupuestos, partes y cobros.",
   },
   {
-    name: "Clinics and appointments",
+    name: "Clínicas y negocios con cita",
     copy:
-      "Physio, beauty, and other appointment-led businesses that need customer flow and reminder discipline.",
+      "Fisioterapia, estética y otros negocios donde la organización de la agenda y el seguimiento del cliente marcan la diferencia.",
   },
   {
-    name: "Small offices",
+    name: "Despachos y oficinas pequeñas",
     copy:
-      "Small teams handling customer history, daily admin, and repetitive back-office work from one main Mac.",
+      "Equipos reducidos que necesitan memoria de cliente, orden administrativo y menos fricción en el trabajo diario.",
   },
   {
-    name: "Solo professionals",
+    name: "Autónomos con muchas tareas pequeñas",
     copy:
-      "Independent operators who need an extra pair of hands without adding another cloud subscription.",
+      "Negocios donde el propietario hace de todo y necesita recuperar tiempo sin montar un sistema complejo ni otra suscripción.",
   },
 ];
 
-const workflow = [
+const setupFlow = [
   {
     step: "01",
-    title: "Install it on the business Mac",
+    title: "Se instala en el Mac del negocio",
     copy:
-      "Pymeclaw is installed privately on the Mac used by the business. The public documentation explains the setup and the day-to-day flow.",
+      "Pymeclaw se prepara para el negocio concreto y se deja funcionando en la máquina principal de trabajo.",
   },
   {
     step: "02",
-    title: "Use natural language for routine work",
+    title: "Se usa hablando claro",
     copy:
-      "The operator asks for help in plain language: create an invoice, prepare a quote, check a follow-up, review the day.",
+      "El autónomo pide lo que necesita en lenguaje natural: presupuesto, factura, seguimiento, cita o resumen del día.",
   },
   {
     step: "03",
-    title: "Save time every week",
+    title: "La oficina corre con menos fricción",
     copy:
-      "The goal is simple: reduce admin time, reduce friction, and keep more attention on customers and paid work.",
+      "El objetivo no es impresionar. Es ahorrar tiempo real cada semana y quitar carga administrativa del negocio.",
+  },
+];
+
+const dailyFlow = [
+  {
+    time: "08:30",
+    title: "Empiezas el día con contexto",
+    copy:
+      "Pymeclaw te ayuda a revisar qué citas tienes, qué seguimientos tocan y qué cobros siguen pendientes.",
+  },
+  {
+    time: "10:15",
+    title: "Entra un cliente o una incidencia nueva",
+    copy:
+      "Le pides que te prepare un presupuesto, que recoja los datos del cliente o que deje anotado el trabajo para no perderlo.",
+  },
+  {
+    time: "13:40",
+    title: "Terminas un trabajo",
+    copy:
+      "A partir de lo que acabas de hacer, Pymeclaw te deja encaminada la factura, el registro del cliente y el siguiente paso.",
+  },
+  {
+    time: "18:10",
+    title: "Cierras el día sin volver a empezar de cero",
+    copy:
+      "Puedes revisar qué queda sin cobrar, qué hay mañana y qué clientes necesitan una respuesta o recordatorio.",
   },
 ];
 
 const docs = [
   {
-    title: "Installation Guide",
+    title: "Guía de instalación",
     href: `${docsBase}/docs/INSTALLATION.md`,
     copy:
-      "What has to happen on the Mac so Pymeclaw is installed correctly and starts from a clean setup.",
+      "Qué hay que hacer para instalar Pymeclaw correctamente en un Mac y dejarlo listo para trabajar.",
   },
   {
-    title: "User Guide",
+    title: "Guía de uso",
     href: `${docsBase}/docs/USER-GUIDE.md`,
     copy:
-      "The main operational guide for using Pymeclaw properly once it is already installed.",
+      "La explicación práctica de cómo se usa Pymeclaw en el día a día una vez está instalado.",
   },
   {
-    title: "Quick Reference",
+    title: "Hoja rápida",
     href: `${docsBase}/docs/QUICK-REFERENCE.md`,
     copy:
-      "A short daily reference for business owners who want the fastest path to common tasks.",
+      "Una referencia breve para tareas habituales cuando quieres ir directo a lo importante.",
   },
   {
-    title: "Usage Examples",
+    title: "Ejemplos reales",
     href: `${docsBase}/examples/README.md`,
     copy:
-      "See how the product fits real small-business situations before deployment.",
+      "Casos de uso para entender cómo encaja el producto en negocios pequeños de verdad.",
   },
 ];
 
 const metrics = [
-  { value: "Local", label: "Runs on the business Mac" },
-  { value: "1 flow", label: "Installation, use, and daily routine" },
-  { value: "0 cloud", label: "No cloud-first product dependency" },
+  { value: "Local", label: "Funciona en el Mac del negocio" },
+  { value: "1 rutina", label: "Instalación, uso y operativa conectados" },
+  { value: "0 nube", label: "Sin depender de una plataforma cloud" },
 ];
 
 export default function Home() {
@@ -130,13 +158,14 @@ export default function Home() {
     <main className="relative min-h-screen overflow-x-hidden bg-[var(--page)] text-[var(--ink)]">
       <div className="ambient ambient-left" />
       <div className="ambient ambient-right" />
+
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-20 px-5 pb-16 pt-5 sm:px-8 lg:px-12">
         <header className="sticky top-4 z-20">
           <div className="surface-card flex items-center justify-between gap-4 rounded-full px-5 py-3 backdrop-blur-xl">
             <a className="flex items-center gap-3" href="#top">
               <Image
                 src="/pymeclaw-logo.jpeg"
-                alt="Pymeclaw logo"
+                alt="Logo de Pymeclaw"
                 width={44}
                 height={44}
                 className="h-11 w-11 rounded-2xl border border-white/70 object-cover shadow-[0_10px_30px_rgba(13,24,45,.12)]"
@@ -147,23 +176,26 @@ export default function Home() {
                   Pymeclaw
                 </div>
                 <div className="text-xs text-[var(--soft)]">
-                  Local office assistant for small business
+                  Asistente local para la oficina pequeña
                 </div>
               </div>
             </a>
 
             <nav className="hidden items-center gap-6 text-sm text-[var(--soft)] md:flex">
-              <a className="transition hover:text-[var(--ink)]" href="#features">
-                Features
+              <a className="transition hover:text-[var(--ink)]" href="#ventajas">
+                Ventajas
               </a>
-              <a className="transition hover:text-[var(--ink)]" href="#sectors">
-                Sectors
+              <a className="transition hover:text-[var(--ink)]" href="#sectores">
+                Sectores
               </a>
-              <a className="transition hover:text-[var(--ink)]" href="#docs">
-                Docs
+              <a className="transition hover:text-[var(--ink)]" href="#flujo">
+                Flujo
               </a>
-              <a className="transition hover:text-[var(--ink)]" href="#contact">
-                Contact
+              <a className="transition hover:text-[var(--ink)]" href="#guias">
+                Guías
+              </a>
+              <a className="transition hover:text-[var(--ink)]" href="#contacto">
+                Contacto
               </a>
             </nav>
           </div>
@@ -171,22 +203,24 @@ export default function Home() {
 
         <section
           id="top"
-          className="grid items-start gap-10 pt-6 lg:grid-cols-[1.2fr_.8fr] lg:pt-10"
+          className="grid items-start gap-10 pt-6 lg:grid-cols-[1.18fr_.82fr] lg:pt-10"
         >
           <div className="space-y-8">
             <div className="inline-flex items-center gap-3 rounded-full border border-[var(--line)] bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[var(--muted)] shadow-[0_16px_40px_rgba(13,24,45,.06)]">
               <span className="h-2.5 w-2.5 rounded-full bg-[var(--accent)] shadow-[0_0_0_8px_rgba(49,181,152,.12)]" />
-              Private installation for real businesses
+              Instalación privada para negocios reales
             </div>
 
             <div className="space-y-5">
-              <h1 className="max-w-4xl text-5xl leading-[0.93] font-semibold tracking-[-0.05em] text-[var(--ink)] sm:text-6xl lg:text-7xl">
-                The office assistant that stays on your Mac.
+              <h1 className="max-w-4xl text-5xl leading-[0.9] font-semibold tracking-[-0.06em] text-[var(--ink)] sm:text-6xl lg:text-7xl">
+                Menos administración.
+                <br />
+                Más negocio.
               </h1>
               <p className="max-w-2xl text-lg leading-8 text-[var(--soft)] sm:text-xl">
-                Pymeclaw helps small Spanish businesses handle invoices,
-                appointments, customer follow-up, and routine admin without
-                turning the office into another cloud stack.
+                Pymeclaw ayuda al autónomo y a la pequeña oficina a ordenar
+                presupuestos, facturas, citas, seguimiento de clientes y tareas
+                repetitivas sin convertir el negocio en otra pila de herramientas.
               </p>
             </div>
 
@@ -197,13 +231,13 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Read the installation guide
+                Ver instalación
               </a>
               <a
                 className="ghost-button"
-                href="mailto:learntouseai@gmail.com?subject=Pymeclaw%20installation"
+                href={`mailto:${contactMail}?subject=Pymeclaw%20instalacion`}
               >
-                Request a private installation
+                Pedir instalación privada
               </a>
             </div>
 
@@ -232,10 +266,10 @@ export default function Home() {
                 />
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--muted)]">
-                    Daily office flow
+                    Oficina diaria
                   </p>
                   <h2 className="mt-2 text-2xl font-semibold tracking-[-0.04em]">
-                    Less admin drag. More working time.
+                    Más orden. Menos desgaste mental.
                   </h2>
                 </div>
               </div>
@@ -253,25 +287,25 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="mt-6 rounded-[1.75rem] border border-[var(--line)] bg-[linear-gradient(180deg,rgba(255,255,255,.88),rgba(244,247,253,.9))] p-5">
-                <div className="flex items-center justify-between">
+              <div className="mt-6 rounded-[1.75rem] border border-[var(--line)] bg-[linear-gradient(180deg,rgba(255,255,255,.9),rgba(247,243,236,.95))] p-5">
+                <div className="flex items-center justify-between gap-3">
                   <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">
-                    Typical morning
+                    Un día típico con Pymeclaw
                   </p>
                   <span className="rounded-full bg-[var(--chip)] px-3 py-1 text-xs font-medium text-[var(--ink)]">
-                    Quiet, local workflow
+                    Flujo local y práctico
                   </span>
                 </div>
                 <div className="mt-4 space-y-3">
                   {[
-                    "08:45 Create a quote for a new customer request.",
-                    "09:20 Check today’s appointments and reminders.",
-                    "11:00 Review unpaid invoices and next follow-up.",
-                    "13:30 Keep a clean customer history on one machine.",
+                    "08:30 Revisas agenda, seguimientos y cobros pendientes.",
+                    "10:15 Preparas un presupuesto nuevo sin perder el contexto del cliente.",
+                    "13:40 Dejas encaminada la factura al terminar el trabajo.",
+                    "18:10 Cierras el día con una visión clara de mañana.",
                   ].map((line) => (
                     <div
                       key={line}
-                      className="flex items-start gap-3 rounded-2xl bg-white/80 px-4 py-3 shadow-[0_12px_24px_rgba(13,24,45,.05)]"
+                      className="flex items-start gap-3 rounded-2xl bg-white/82 px-4 py-3 shadow-[0_12px_24px_rgba(13,24,45,.05)]"
                     >
                       <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-[var(--accent)]" />
                       <p className="text-sm leading-6 text-[var(--soft)]">{line}</p>
@@ -283,27 +317,27 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-shell">
+        <section id="ventajas" className="section-shell">
           <div className="section-intro">
-            <span className="section-eyebrow">Why it matters</span>
+            <span className="section-eyebrow">Ventajas</span>
             <h2 className="section-title">
-              Built for small offices that lose time to repetitive admin.
+              Pensado para negocios pequeños que pierden tiempo en lo repetitivo.
             </h2>
             <p className="section-copy">
-              Pymeclaw is not positioned as another dashboard for teams to
-              learn. It is positioned as a local office assistant for businesses
-              that already work from one main Mac and need routine work to flow
-              with less friction.
+              Pymeclaw no está planteado como otra plataforma que hay que
+              aprender. Está planteado como un asistente local para negocios que
+              ya trabajan con presión, con poco tiempo y con demasiadas tareas
+              administrativas pequeñas.
             </p>
           </div>
 
-          <div id="features" className="grid gap-5 lg:grid-cols-3">
+          <div className="grid gap-5 lg:grid-cols-3">
             {features.map((feature) => (
               <article
                 key={feature.title}
                 className={`feature-card feature-${feature.tone}`}
               >
-                <span className="feature-index">Feature</span>
+                <span className="feature-index">Ventaja</span>
                 <h3 className="feature-title">{feature.title}</h3>
                 <p className="feature-copy">{feature.copy}</p>
               </article>
@@ -311,17 +345,20 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="sectors" className="section-shell">
+        <section id="sectores" className="section-shell">
           <div className="section-intro">
-            <span className="section-eyebrow">Sectors</span>
+            <span className="section-eyebrow">Sectores</span>
             <h2 className="section-title">
-              A better fit for businesses that run on speed, memory, and follow-up.
+              Encaja mejor en negocios donde el tiempo, el seguimiento y la memoria importan.
             </h2>
           </div>
 
           <div className="grid gap-5 md:grid-cols-2">
             {sectors.map((sector) => (
-              <article key={sector.name} className="surface-card rounded-[1.75rem] p-6">
+              <article
+                key={sector.name}
+                className="surface-card rounded-[1.75rem] p-6"
+              >
                 <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">
                   Sector
                 </p>
@@ -336,16 +373,42 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="flujo" className="section-shell">
+          <div className="section-intro">
+            <span className="section-eyebrow">Flujo típico</span>
+            <h2 className="section-title">
+              Qué hace Pymeclaw por un autónomo a lo largo del día.
+            </h2>
+            <p className="section-copy">
+              La idea no es que el autónomo aprenda una herramienta compleja. La
+              idea es que Pymeclaw acompañe el ritmo normal del negocio y quite
+              carga en los puntos donde más se pierde tiempo.
+            </p>
+          </div>
+
+          <div className="grid gap-5 lg:grid-cols-2">
+            {dailyFlow.map((item) => (
+              <article key={item.time} className="flow-card">
+                <div className="flow-time">{item.time}</div>
+                <div className="flow-content">
+                  <h3 className="flow-title">{item.title}</h3>
+                  <p className="flow-copy">{item.copy}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section className="section-shell workflow-shell">
           <div className="section-intro">
-            <span className="section-eyebrow">How it works</span>
+            <span className="section-eyebrow">Cómo se implanta</span>
             <h2 className="section-title">
-              One installation, one Mac, one calmer routine.
+              Una instalación. Un Mac. Una rutina de oficina más tranquila.
             </h2>
           </div>
 
           <div className="grid gap-5 lg:grid-cols-3">
-            {workflow.map((item) => (
+            {setupFlow.map((item) => (
               <article key={item.step} className="workflow-card">
                 <div className="workflow-step">{item.step}</div>
                 <h3 className="workflow-title">{item.title}</h3>
@@ -355,15 +418,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="docs" className="section-shell">
+        <section id="guias" className="section-shell">
           <div className="section-intro">
-            <span className="section-eyebrow">Documentation</span>
+            <span className="section-eyebrow">Guías</span>
             <h2 className="section-title">
-              The public repo is there to make installation and daily use clear.
+              La documentación pública está para que la instalación y el uso se entiendan rápido.
             </h2>
             <p className="section-copy">
-              The product website explains the promise. The public repository
-              explains the practical side: installation, use, and examples.
+              La web explica la propuesta. El repositorio público explica la
+              parte práctica: instalación, uso diario y ejemplos reales.
             </p>
           </div>
 
@@ -377,7 +440,7 @@ export default function Home() {
                 className="doc-card"
               >
                 <div>
-                  <span className="section-eyebrow">Open document</span>
+                  <span className="section-eyebrow">Abrir guía</span>
                   <h3 className="mt-3 text-2xl font-semibold tracking-[-0.04em] text-[var(--ink)]">
                     {doc.title}
                   </h3>
@@ -385,22 +448,21 @@ export default function Home() {
                     {doc.copy}
                   </p>
                 </div>
-                <span className="doc-arrow">View</span>
+                <span className="doc-arrow">Ver</span>
               </a>
             ))}
           </div>
         </section>
 
-        <section id="contact" className="cta-shell">
+        <section id="contacto" className="cta-shell">
           <div className="max-w-3xl">
-            <span className="section-eyebrow">Get started</span>
+            <span className="section-eyebrow">Contacto</span>
             <h2 className="mt-4 text-4xl font-semibold tracking-[-0.05em] text-white sm:text-5xl">
-              If you want Pymeclaw in a real business, start with the docs or ask
-              for a private installation.
+              Si quieres Pymeclaw en un negocio real, empieza por la guía o pide una instalación privada.
             </h2>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-white/72">
-              The public repository explains the product clearly. The actual
-              installation is prepared privately for each business.
+              La documentación pública te enseña el producto con claridad. La
+              instalación se prepara de forma privada para cada negocio.
             </p>
           </div>
 
@@ -411,13 +473,13 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              Open the public repo
+              Abrir documentación pública
             </a>
             <a
               className="ghost-button ghost-button-dark"
-              href="mailto:learntouseai@gmail.com?subject=Pymeclaw%20product%20website"
+              href={`mailto:${contactMail}?subject=Pymeclaw`}
             >
-              Contact Ramon Guillamon
+              {contactMail}
             </a>
           </div>
         </section>
@@ -432,16 +494,16 @@ export default function Home() {
                 height={34}
                 className="h-8 w-8 rounded-xl object-cover"
               />
-              <span>Pymeclaw product site for Vercel</span>
+              <span>Web de producto de Pymeclaw</span>
             </div>
             <div className="flex flex-wrap gap-x-5 gap-y-2">
               <a href={`${docsBase}/docs/INSTALLATION.md`} target="_blank" rel="noreferrer">
-                Installation
+                Instalación
               </a>
               <a href={`${docsBase}/docs/USER-GUIDE.md`} target="_blank" rel="noreferrer">
-                User Guide
+                Uso diario
               </a>
-              <a href="mailto:learntouseai@gmail.com">learntouseai@gmail.com</a>
+              <a href={`mailto:${contactMail}`}>{contactMail}</a>
             </div>
           </div>
         </footer>
