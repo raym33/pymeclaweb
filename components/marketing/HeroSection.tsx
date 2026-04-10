@@ -2,7 +2,7 @@ import React from 'react'
 import { cn } from '@/lib/utils'
 import Button from '../ui/Button'
 
-export interface HeroSectionProps {
+export interface HeroSectionProps extends React.HTMLAttributes<HTMLElement> {
   title: string
   subtitle?: string
   description: string
@@ -15,7 +15,7 @@ export interface HeroSectionProps {
   children?: React.ReactNode
 }
 
-const HeroSection = ({ title, subtitle, description, primaryCTA, secondaryCTA, image, variant = 'default', background = 'gradient', className, children }: HeroSectionProps) => {
+const HeroSection = ({ title, subtitle, description, primaryCTA, secondaryCTA, image, variant = 'default', background = 'gradient', className, children, ...rest }: HeroSectionProps) => {
   const backgrounds = {
     gradient: 'bg-gradient-to-br from-blue-600 to-purple-700',
     solid: 'bg-gray-900',
@@ -27,6 +27,7 @@ const HeroSection = ({ title, subtitle, description, primaryCTA, secondaryCTA, i
 
   return (
     <section
+      {...rest}
       className={cn('relative overflow-hidden', backgrounds[background], className)}
       style={background === 'image' && image ? { backgroundImage: `url(${image})` } : undefined}
     >
